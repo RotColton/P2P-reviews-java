@@ -1,66 +1,101 @@
-# P2P Reviews – Java
+# 🧩 Proyecto Kanban — Revisión entre Pares
 
-This repository is used to manage **peer-to-peer (P2P) reviews** of Java exercises, using GitHub Issues and a GitHub Projects Kanban board.
-
----
-
-## 🔹 How to request a review
-
-1. Create a new **Issue** in this repository.  
-2. The Issue title must follow this format:
-```css
-[Sprint X][Task Y][Level Z] - Firstname Lastname
-````
-- **X** = sprint number (1–5)  
-- **Y** = task number (1–8)  
-- **Z** = level achieved (1, 2, or 3)  
-
-👉 Example: 
-```css
-[Sprint 1][Task 8][Level 3] - Juan Pérez
-````
-3. In the Issue description include:  
-   - **URL of your repository** with the solution.  
-   - (Optional) Any specific doubts or aspects you’d like feedback on.  
+¡Bienvenido al tablero **Kanban de revisión entre compañeros**!  
+Aquí gestionaremos las tareas que necesitan revisión antes de entregarlas a la mentora.  
+Cada tarjeta representa una **tarea (Tasca)** que será revisada, corregida y aprobada 💪
 
 ---
 
-## 🔹 How to perform a review
+## ⚪ Columnas del tablero
 
-1. Go to the **Projects** tab to see the Kanban board:  
-   - **To be reviewed** → exercises waiting for review.  
-   - **In review** → exercises currently being reviewed.  
-   - **Reviewed** → exercises already reviewed.  
-
-2. Pick an Issue from the **To be reviewed** column and assign yourself as the reviewer.  
-3. Move the card to **In review**.  
-4. Provide your feedback as comments on the Issue:  
-   - Strengths.  
-   - Suggested improvements.  
-   - Errors or problems found.  
-5. Once finished, move the card to **Reviewed**.  
+| Columna | Significado | Responsable | Tiempo máximo |
+|----------|--------------|--------------|----------------|
+| 🟢 **To be reviewed** | Tareas que necesitan revisión | Alumno autor | 1 día |
+| 🔴 **Assigned** | Tarea asignada a un compañero revisor | Revisor | 1 día |
+| 🟠 **In review** | Tarea en proceso de revisión | Revisor | — |
+| 🔵**To refactor** | Tarea con cambios pendientes | Alumno autor | — |
+| 🟣 **Delivered** | Tarea entregada a la mentora (vía Moodle) | Alumno autor | — |
+| 🟡 **Approved** | Ejercicio aprobado por la mentora | Mentora | — |
 
 ---
 
-## 🔹 Mentor’s role
+## 🧱 Formato del título de la tarjeta
 
-- The **mentor** may also assign Issues to students to balance the review workload.  
-- The mentor can move cards between columns if a review is not progressing.  
-- The mentor will supervise the quality of the feedback and intervene if necessary.  
+Cada tarjeta debe seguir **este formato exacto** en el título:
+```
+Sprint X [1–8] Tasca Y [1–n] Nivel Z [1, 2 o 3] Nombre Apellido
+```
+Ejemplo:
+```
+Sprint 3 Tasca 2 Nivel 2 Ana López
+```
+---
+
+## 🗂️ Contenido de la tarjeta
+
+Dentro de la tarjeta, incluye **solo la URL del repositorio** con la solución del ejercicio.  
+Ejemplo:
+```
+https://github.com/ana-lopez/sprint3-tasca2
+```
+## 🔄 Flujo de trabajo
+
+1. **🆕 Crear tarjeta**
+   - Crea la tarjeta en la columna **🟢To be reviewed**.  
+   - Añade en el contenido la **URL del repositorio** de tu ejercicio.
+
+2. **👥 Asignación**
+   - Un compañero tomará la tarjeta y la moverá a **🔴Assigned**.  
+
+3. **🔍 Revisión**
+   - El revisor mueve la tarjeta a **🟠In review**. 
+   - Analiza el código y deja comentarios en tu **repositorio** mediante *Issues de GitHub*. 
+
+4. **🛠️ Refactorización**
+   - Si tu código requiere cambios, mueve la tarjeta a **🔵To refactor**.  
+   - Realiza las correcciones y **sube los cambios al mismo repositorio**.
+
+5. **🚀 Entrega**
+   - Cuando todo esté listo, **entrega la URL en Moodle**.  
+   - Mueve la tarjeta a **🟣Delivered**.
+
+6. **🧑‍🏫 Revisión de la mentora**
+   - La mentora moverá la tarjeta a:
+     -  **🟡Approved**, si el ejercicio está correcto.
+     -  **🔵To refactor**, si necesita más correcciones.
+
+7. **🧹 Cierre de issues**
+   - Cuando la mentora apruebe tu ejercicio, **cierra el issue** de revisión en tu repositorio.
 
 ---
 
-## 🔹 Basic rules
+## 💬 Comentarios y revisiones
 
-- Each student must **request reviews** for their exercises.  
-- Each student must **review at least one exercise** from another peer (or more, if assigned by the mentor).  
-- Always provide respectful and constructive feedback.
+- Las revisiones se hacen **solo mediante *Issues* en el repositorio del alumno**.  
 
 ---
 
-## 🔹 Benefits
+## 🕒 Recomendaciones importantes:
 
-✔️ No more lost papers or missing reviews.  
-✔️ Clear tracking of each review’s status.  
-✔️ Everything is recorded on GitHub.  
-✔️ The mentor ensures fair distribution of reviews.  
+### 🔹 Correcciones sincrónicas
+- Reúnete con un compañero y realiza la corrección **en tiempo real**.  
+- Suele ser más rápida y eficiente: ⏱️ **15 a 30 minutos**. 
+### 🔹 Correcciones asincrónicas
+- Tómate más tiempo para revisar el código con detalle.  
+- **No excedas 1 hora**.  
+- Se recomienda realizarla en la **primera hora de la mañana**, luego continúa con tus otras tareas.  
+### 🔹 Responsabilidad en la entrega
+- Asegúrate de que los ejercicios **no permanezcan más de 2 días sin corrección**.  Es tu responsabilidad agilizar la entrega.
+- Si ningún compañero se ha asignado tu tarjeta, **pídele a alguien que lo haga**. 
+
+---
+
+# 📌 Recordatorios importantes
+- Las tarjetas **no deben permanecer más de 2 días sin entregar**.  
+- Cada alumno es responsable de **mover su propia tarjeta** según el estado del trabajo y evitar retrasos.  
+- Revisa el tablero **todos los días** para mantener el flujo activo. 
+
+---
+📘 **Proyecto educativo:** Revisión entre pares — Kanban de correcciones  
+📅 **Versión:** Octubre 2025  
+👩‍🏫 **Mentora:** * Romina Domingo
